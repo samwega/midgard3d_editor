@@ -28,10 +28,12 @@ KEYMAP_COL_2 :: `GIZMO
 KEYMAP_COL_3 :: `CAMERA
 - RMB+WASD: Fly
 - RMB+EQ: Fly Up/Down
-- RMB+Mouse: Look
-- MMB: Orbit
+- Hold Shift to double speed
+- RMB+Drag: Look
+- MMB+Drag: Orbit
 - Shift+MMB: Pan
-- Wheel: Zoom`
+- Wheel: Zoom
+- RMB+Wheel: Change Speed`
 
 KEYMAP_COL_4 :: `UI / FILE
 - H: Toggle Hierarchy
@@ -55,7 +57,7 @@ draw_keymap_panel :: proc(ui_state: ^ui.UI_State, font: rl.Font) {
 
     if ui_state.keymap_visible {
         // Panel settings
-        panel_height := f32(192)
+        panel_height := f32(212)    // add about 20 px per every extra line
         panel_y := f32(rl.GetScreenHeight()) - panel_height - 20 // A bit above the hint
         
         left_bound := ui.is_hierarchy_visible() ? ui.get_hierarchy_width() : 0
