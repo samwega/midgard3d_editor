@@ -342,7 +342,10 @@ load_hdri_environment :: proc(file_path: string, current_env: Environment_State)
             return {}, false
         }
         defer rl.UnloadImage(image)
-        
+
+        // Flip image vertically to correct skybox orientation (same as HDR files)
+        rl.ImageFlipVertical(&image)
+
         // Convert to texture
         skybox_texture = rl.LoadTextureFromImage(image)
         if skybox_texture.id == 0 {
