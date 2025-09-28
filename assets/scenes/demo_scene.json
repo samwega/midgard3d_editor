@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "next_id": 8,
+  "objects": [
+    {
+      "id": 1,
+      "name": "Reference 1x1x1 Cube",
+      "object_type": "CUBE",
+      "transform": {
+        "position": [
+          0.50000000,
+          0.50000000,
+          0.50000000
+        ],
+        "rotation": [
+          0.00000000,
+          0.00000000,
+          0.00000000
+        ],
+        "scale": [
+          1.00000000,
+          1.00000000,
+          1.00000000
+        ]
+      },
+      "color": [
+        51,
+        161,
+        161,
+        255
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Sphere_3",
+      "object_type": "SPHERE",
+      "transform": {
+        "position": [
+          22.40173149,
+          8.93192768,
+          2.09277034
+        ],
+        "rotation": [
+          0.00001387,
+          63.44357300,
+          0.00001497
+        ],
+        "scale": [
+          7.02089071,
+          2.72851610,
+          2.82913589
+        ]
+      },
+      "color": [
+        115,
+        54,
+        105,
+        235
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Cylinder_4",
+      "object_type": "CYLINDER",
+      "transform": {
+        "position": [
+          -6.85137177,
+          3.85744810,
+          4.53578758
+        ],
+        "rotation": [
+          0.00000000,
+          0.00000000,
+          38.89317322
+        ],
+        "scale": [
+          0.39364654,
+          2.23321533,
+          1.00000000
+        ]
+      },
+      "color": [
+        184,
+        92,
+        64,
+        175
+      ]
+    },
+    {
+      "id": 5,
+      "name": "dragon.glb_5",
+      "object_type": "MESH",
+      "transform": {
+        "position": [
+          24.49047852,
+          19.11065102,
+          3.14664268
+        ],
+        "rotation": [
+          163.37330627,
+          -65.74214935,
+          180.00000000
+        ],
+        "scale": [
+          18.38396072,
+          18.38396072,
+          18.38396072
+        ]
+      },
+      "color": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "mesh_source_file": "C:\\Users\\Alexander\\Coding\\Odin\\midgard3d_editor_odin_raylib\\assets\\models\\dragon.glb"
+    },
+    {
+      "id": 6,
+      "name": "viking_house.glb_6",
+      "object_type": "MESH",
+      "transform": {
+        "position": [
+          -12.60753822,
+          0.00279727,
+          -16.42335892
+        ],
+        "rotation": [
+          0.00000000,
+          -56.73006439,
+          0.00000000
+        ],
+        "scale": [
+          1.00000000,
+          1.00000000,
+          1.00000000
+        ]
+      },
+      "color": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "mesh_source_file": "C:\\Users\\Alexander\\Coding\\Odin\\midgard3d_editor_odin_raylib\\assets\\models\\viking_house.glb"
+    },
+    {
+      "id": 7,
+      "name": "Sphere_7",
+      "object_type": "SPHERE",
+      "transform": {
+        "position": [
+          -17.33750153,
+          1.03288412,
+          3.66958094
+        ],
+        "rotation": [
+          0.00000000,
+          0.00000000,
+          0.00000000
+        ],
+        "scale": [
+          1.00000000,
+          1.00000000,
+          1.00000000
+        ]
+      },
+      "color": [
+        90,
+        74,
+        112,
+        255
+      ]
+    }
+  ],
+  "environment": {
+    "enabled": true,
+    "source_path": "C:\\Users\\Alexander\\Coding\\Odin\\midgard3d_editor_odin_raylib\\assets\\skyboxes\\AmbienceExposure4k.hdr",
+    "rotation_y": 43.71428680,
+    "exposure": -0.94285703,
+    "intensity": 1.35000002,
+    "background_visible": true,
+    "grid_visible": true,
+    "sky_color": [
+      55,
+      70,
+      90
+    ]
+  }
+}

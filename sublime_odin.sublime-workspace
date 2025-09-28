@@ -1,0 +1,1274 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"com",
+				"comparer2()"
+			],
+			[
+				"enu",
+				"enumerator"
+			],
+			[
+				"enum",
+				"enumerator"
+			],
+			[
+				"dyna",
+				"dynamic_array()"
+			],
+			[
+				"type",
+				"type_info_of($T: typeid) -> ^runtime.Type_Info"
+			],
+			[
+				"qu",
+				"quaternion256"
+			],
+			[
+				"arena",
+				"arena_allocator(arena: ^Arena) -> mem.Allocator"
+			],
+			[
+				"are",
+				"arena2"
+			],
+			[
+				"arena_ini",
+				"arena_init_growing(arena: ^Arena, reserved: uint = DEFAULT_ARENA_GROWING_MINIMUM_BLOCK_SIZE) -> err: Allocator_Error"
+			],
+			[
+				"mys",
+				"my_small_arr"
+			],
+			[
+				"my",
+				"my_small_arr"
+			],
+			[
+				"small_arr",
+				"small_array"
+			],
+			[
+				"small",
+				"small_array"
+			],
+			[
+				"Small",
+				"small_array"
+			],
+			[
+				"curre",
+				"current_max_array"
+			],
+			[
+				"find",
+				"find_max(arr: [Raindeer]int) -> _: int"
+			],
+			[
+				"ra",
+				"raindeer_key"
+			],
+			[
+				"fina",
+				"final_distance"
+			],
+			[
+				"R",
+				"Raindeer"
+			],
+			[
+				"cur",
+				"current_time"
+			],
+			[
+				"fin",
+				"final_distance"
+			],
+			[
+				"rain",
+				"raindeer_stats"
+			],
+			[
+				"final",
+				"final_distance"
+			],
+			[
+				"re",
+				"remainder_time"
+			],
+			[
+				"rem",
+				"remainder_tyme"
+			],
+			[
+				"time",
+				"time_per_cycle"
+			],
+			[
+				"raindeer_",
+				"raindeer_stats"
+			],
+			[
+				"stats",
+				"Stats"
+			],
+			[
+				"Da",
+				"Dasher"
+			],
+			[
+				"D",
+				"Donner"
+			],
+			[
+				"raw",
+				"raw_data"
+			],
+			[
+				"buil",
+				"builtin"
+			],
+			[
+				"point_to",
+				"point_to_this_copy"
+			],
+			[
+				"point_to_this",
+				"point_to_this_pointer"
+			],
+			[
+				"rec",
+				"rectangles"
+			],
+			[
+				"is_nu",
+				"is_number"
+			],
+			[
+				"some",
+				"some_ints"
+			],
+			[
+				"len",
+				"length_float2"
+			],
+			[
+				"the",
+				"the_steps_forward"
+			],
+			[
+				"next",
+				"next_number(number: int) -> int"
+			],
+			[
+				"nice",
+				"nice_count"
+			],
+			[
+				"has",
+				"has_double_letter(line: string) -> bool"
+			],
+			[
+				"not",
+				"not_nautty(line: string) -> bool"
+			],
+			[
+				"not_",
+				"not_nautty(line: string) -> bool"
+			],
+			[
+				"vo",
+				"vowel_counter"
+			],
+			[
+				"vowel",
+				"vowel_counter"
+			],
+			[
+				"split_lines",
+				"split_lines(s: string, allocator := context.allocator) -> (res: []string, err: mem.Allocator_Error)"
+			],
+			[
+				"string",
+				"string_suffix"
+			],
+			[
+				"hex",
+				"hex_string"
+			],
+			[
+				"enco",
+				"encode(src: []byte, allocator := context.allocator, loc := #caller_location) -> []byte"
+			],
+			[
+				"str",
+				"strings"
+			],
+			[
+				"In",
+				"INPUT"
+			],
+			[
+				"move",
+				"move_counter"
+			],
+			[
+				"ri",
+				"ribbon_slack"
+			],
+			[
+				"match_",
+				"match_iterator(it: ^Match_Iterator) -> (result: Capture, index: int, ok: bool)"
+			],
+			[
+				"b",
+				"bytes"
+			],
+			[
+				"incre",
+				"increment_number_protected"
+			],
+			[
+				"point",
+				"point_to_this_array"
+			],
+			[
+				"poin",
+				"pointer2"
+			],
+			[
+				"num",
+				"numero"
+			],
+			[
+				"po",
+				"pointer2"
+			],
+			[
+				"nu",
+				"numero"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"no",
+				"no_nil"
+			],
+			[
+				"TE",
+				"TEST_CONST"
+			],
+			[
+				"test",
+				"TEST_CONST"
+			],
+			[
+				"proc",
+				"process_cat_birthday(cat: ^Cat)"
+			],
+			[
+				"clam",
+				"numeric_clamp(val, min, max: $T) -> T"
+			],
+			[
+				"ran",
+				"random_size"
+			],
+			[
+				"max",
+				"int31_max(n: i32, gen := context.random_generator) -> val: i32"
+			],
+			[
+				"r",
+				"random_size"
+			],
+			[
+				"make",
+				"make_array_of_7($N: int) -> [N]f32"
+			],
+			[
+				"numer",
+				"numero2"
+			],
+			[
+				"nume",
+				"numero2"
+			],
+			[
+				"increment_",
+				"increment_number_protected(num: ^int)"
+			],
+			[
+				"tim",
+				"time_in_space"
+			],
+			[
+				"roc",
+				"Entity_Rocket"
+			],
+			[
+				"can",
+				"can_jump"
+			],
+			[
+				"E",
+				"Entity_Player"
+			],
+			[
+				"Enti",
+				"Entity_Rocket"
+			],
+			[
+				"Ent",
+				"Entity_Player"
+			],
+			[
+				"M",
+				"My_Raw_Union"
+			],
+			[
+				"shap",
+				"Shape_Circle"
+			],
+			[
+				"time_va",
+				"time_val_ok"
+			],
+			[
+				"PErson",
+				"Person_Data"
+			],
+			[
+				"pri",
+				"printfln(fmt: string, args: ..any, flush := true) -> int"
+			],
+			[
+				"comp",
+				"comp_type"
+			],
+			[
+				"player",
+				"player_vel"
+			],
+			[
+				"player_r",
+				"player_run_current_frame"
+			],
+			[
+				"mul",
+				"player_sprite_mult"
+			],
+			[
+				"pla",
+				"player_sprite_mult"
+			],
+			[
+				"dude",
+				"dudette"
+			],
+			[
+				"sta",
+				"stage_name"
+			],
+			[
+				"Per",
+				"Person_Stats"
+			],
+			[
+				"st",
+				"stats"
+			],
+			[
+				"Pers",
+				"Person_Stats"
+			],
+			[
+				"player_run",
+				"player_run_frame_length"
+			],
+			[
+				"player_run_",
+				"player_run_current_frame"
+			],
+			[
+				"player_run_FRame_",
+				"player_run_frame_timer"
+			],
+			[
+				"playue",
+				"player_run_texture"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"l",
+				"LEFT"
+			],
+			[
+				"press",
+				"IsKeyPressed(key: KeyboardKey) -> bool"
+			],
+			[
+				"drawrec",
+				"DrawRectangleV(position: Vector2, size: Vector2, color: Color)"
+			],
+			[
+				"ass",
+				"assert(condition: bool, message := #caller_expression(condition), loc := #caller_location)"
+			],
+			[
+				"v",
+				"value"
+			],
+			[
+				"sum",
+				"sum_proc(value: int)"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"som",
+				"some_slice"
+			],
+			[
+				"typ",
+				"type_of"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"My",
+				"My_Raw_Union"
+			],
+			[
+				"Sha",
+				"Shape2"
+			],
+			[
+				"print",
+				"println(args: ..any, sep := \" \", flush := true) -> int"
+			],
+			[
+				"prin",
+				"println(args: ..any, sep := \" \", flush := true) -> int"
+			],
+			[
+				"f",
+				"f32"
+			],
+			[
+				"PErs",
+				"Person_Data"
+			],
+			[
+				"My_",
+				"My_Union"
+			],
+			[
+				"pr",
+				"printfln(fmt: string, args: ..any, flush := true) -> int"
+			],
+			[
+				"snake",
+				"snake_length"
+			],
+			[
+				"pop",
+				"pop(array: ^$T/[dynamic]$E, loc := #caller_location) -> res: E"
+			],
+			[
+				"sna",
+				"snake_length"
+			],
+			[
+				"tick",
+				"TICK_RATE"
+			],
+			[
+				"camera",
+				"Camera2D"
+			],
+			[
+				"drawrect",
+				"DrawRectangleRec(rec: Rectangle, color: Color)"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/main.odin",
+			"settings":
+			{
+				"buffer_size": 605,
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"wra",
+				"Word Wrap: Toggle"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"WRAP",
+				"Word Wrap: Toggle"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"rainbow",
+				"RainbowBrackets: Color"
+			],
+			[
+				"color",
+				"UI: Select Color Scheme"
+			],
+			[
+				"rainb",
+				"RainbowBrackets: Color"
+			],
+			[
+				"terminus",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"wrat",
+				"Word Wrap: Toggle"
+			],
+			[
+				"col",
+				"RainbowBrackets: Color"
+			],
+			[
+				"colo",
+				"RainbowBrackets: Color"
+			],
+			[
+				"rainbo",
+				"RainbowBrackets: Color"
+			],
+			[
+				"bracket",
+				"RainbowBrackets: Sweep"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"bracketsh",
+				"BracketHighlighter: Quick Start Guide"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"highli",
+				"HighlightWords: Toggle Settings"
+			],
+			[
+				"highlight",
+				"HighlightWords: Highlight Words"
+			],
+			[
+				"isnta",
+				"Package Control: Install Package"
+			],
+			[
+				"termin",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			],
+			[
+				"fuzzy",
+				"SimpleFuzzy: Active Project…"
+			],
+			[
+				"terminu",
+				"Terminus: Open Default Shell in Tab (View)"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"buildv",
+				"Disable/Enable buildview for this window"
+			],
+			[
+				"keyb",
+				"Preferences: LSP Key Bindings"
+			],
+			[
+				"symbol",
+				"LSP: Goto Symbol in Project"
+			],
+			[
+				"setti",
+				"Preferences: Settings"
+			],
+			[
+				"lsp",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"settin",
+				"Preferences: Settings"
+			],
+			[
+				"theme",
+				"UI: Customize Theme"
+			],
+			[
+				"customi",
+				"UI: Customize Theme"
+			],
+			[
+				"isnt",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"files",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"lsp e",
+				"LSP: Enable Language Server in Project"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Advanced Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib",
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/assets",
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/src"
+	],
+	"file_history":
+	[
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/src/rendering/objects.odin",
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/src/rendering/grid.odin",
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/src/ui/font_config.odin",
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/midgard_code_export.md",
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/src/serialization/native_file_dialog.odin",
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/src/editor/editor.odin",
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/src/resources/hdri.odin",
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/src/plugins/bundled/obj_import/loader.odin",
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/src/camera/controls.odin",
+		"/C/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/src/camera/camera.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/raylib_game/raylib_game.odin",
+		"/C/Odin/examples/demo/demo.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/odin_snippets/dynamic_arrays.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/odin_snippets/odin_snippets.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/odin_snippets/examples/example.odin",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text/Packages/User/HighlightWords.sublime-settings",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/quick_test.odin",
+		"/C/Odin/vendor/glfw/wrapper.odin",
+		"/C/Odin/core/container/small_array/small_array.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/2015_04.odin",
+		"/C/Odin/core/text/regex/regex.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/2015_25.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/2015_05.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/2015_03_part_2.odin",
+		"/C/Odin/core/strconv/strconv.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/archived/sort_play.odin.bak",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/2015_14.odin",
+		"/C/Odin/core/mem/raw.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/wip_2015_12.odin",
+		"/C/Odin/core/encoding/json/tokenizer.odin",
+		"/C/Odin/core/time/timezone/tzif.odin",
+		"/C/Odin/core/math/linalg/general.odin",
+		"/C/Odin/core/unicode/letter.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/init_test.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/shadowing_test.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/2015_01.odin",
+		"/C/Odin/core/math/math.odin",
+		"/C/Odin/core/math/big/public.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/2015_03.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/.gitignore",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/README.md",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/2015_02.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/2015_04_alt.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/2015_04_alt_3.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/advent_of_code/2015_04_alt_2.odin",
+		"/C/Odin/examples/all/all_main.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/my_c_functions.c",
+		"/C/Users/Alexander/Coding/Odin/Hellope/main.odin",
+		"/C/Odin/core/fmt/fmt_os.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/sublime_odin.sublime-workspace",
+		"/C/Odin/core/c/libc/stdlib.odin",
+		"/C/Users/Alexander/Coding/edbr/visalands_engine_odin_vulkan/examples/02_triangle/triangle_example.odin",
+		"/C/Users/Alexander/Coding/sublime_odin/snake/snake.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/4_6_evil_islands.odin",
+		"/C/Users/Alexander/Coding/Odin/Hellope/ols.json",
+		"/C/Odin/vendor/raylib/raylib.odin",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text/Packages/User/LSP.sublime-settings",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text/Packages/User/custom-keywords.sublime-syntax",
+		"/C/Users/Alexander/Coding/Odin/Hellope/structs_bug_report.odin",
+		"/C/Odin/vendor/directx/d3d11/d3d11.odin",
+		"/C/Users/Alexander/Coding/Odin/HelloOdin/sublime_odin.sublime-project",
+		"/C/Users/Alexander/Coding/Odin/HelloOdin/6_1_pointers.odin",
+		"/C/Users/Alexander/Coding/Odin/HelloOdin/examples/example.odin",
+		"/C/Users/Alexander/Coding/Odin/HelloOdin/odin_snippets.odin",
+		"/C/Odin/core/fmt/fmt.odin",
+		"/C/Users/Alexander/Coding/Odin/HelloOdin/example/example.odin",
+		"/C/Users/Alexander/Coding/Odin/HelloOdin/5_3_3_maybe.odin",
+		"/C/Users/Alexander/Coding/Odin/snake/main.odin",
+		"/C/Odin/core/reflect/reflect.odin",
+		"/C/Users/Alexander/Coding/Odin/HelloOdin/5_3_4_C_style_raw_unions.odin",
+		"/C/Users/Alexander/Coding/Odin/HelloOdin/5_3_1_union_of_structs.odin",
+		"/C/Users/Alexander/Coding/Odin/Midgard_SDL3/main.odin",
+		"/C/Odin/core/net/common.odin",
+		"/C/Odin/vendor/raylib/raymath.odin",
+		"/C/Users/Alexander/Coding/Odin/HelloOdin/.gitignore",
+		"/C/Users/Alexander/Coding/Odin/HelloOdin/5_2_enums_switch.odin",
+		"/C/Users/Alexander/Coding/Odin/HelloOdin/5_3_unions.odin",
+		"/C/Users/Alexander/Coding/Odin/HelloOdin/5_structs.odin",
+		"/C/Odin/vendor/raylib/rlgl/rlgl.odin",
+		"/C/Odin/vendor/raylib/raygui.odin",
+		"/C/Odin/vendor/raylib/easings.odin",
+		"/C/Users/Alexander/Coding/Odin/midgard_3d_editor/src/plugins/bundled/plugin.odin",
+		"/C/Odin/core/mem/mem.odin",
+		"/C/Users/Alexander/Coding/Odin/midgard_3d_editor/src/plugins/bundled/validation.odin",
+		"/C/Users/Alexander/Coding/Odin/midgard_3d_editor/src/plugins/bundled/loader.odin",
+		"/C/Users/Alexander/Coding/sublime_odin/snake/sublime_odin.sublime-project",
+		"/C/Users/Alexander/Coding/Odin/midgard_3d_editor/src/main.odin",
+		"/C/Users/Alexander/Coding/sublime_odin/learning_odin/main.odin",
+		"/C/Users/Alexander/Coding/sublime_odin/project_template/sublime_odin.sublime-project",
+		"/C/Users/Alexander/Coding/sublime_odin/project_template/hello_world.odin",
+		"/C/Users/Alexander/Coding/sublime_odin/sublime_odin.sublime",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text/Packages/Theme - Default/Default Dark.sublime-theme",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text/Packages/User/Blueberry.sublime-color-scheme",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text/Packages/User/Blueberry.sublime-theme",
+		"/C/Users/Alexander/AppData/Roaming/Sublime Text/Packages/User/Default Dark.sublime-theme"
+	],
+	"find":
+	{
+		"height": 56.0
+	},
+	"find_in_files":
+	{
+		"height": 388.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/main.odin",
+					"selected": true,
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 605,
+						"regions":
+						{
+							"_rb_l0":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										105,
+										106
+									],
+									[
+										106,
+										107
+									],
+									[
+										108,
+										109
+									],
+									[
+										604,
+										605
+									]
+								],
+								"scope": "l0._rb"
+							},
+							"_rb_l1":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										131,
+										132
+									],
+									[
+										145,
+										146
+									],
+									[
+										178,
+										179
+									],
+									[
+										179,
+										180
+									],
+									[
+										205,
+										206
+									],
+									[
+										219,
+										220
+									],
+									[
+										308,
+										309
+									],
+									[
+										322,
+										323
+									],
+									[
+										352,
+										353
+									],
+									[
+										366,
+										367
+									],
+									[
+										401,
+										402
+									],
+									[
+										415,
+										416
+									],
+									[
+										451,
+										452
+									],
+									[
+										452,
+										453
+									],
+									[
+										454,
+										455
+									],
+									[
+										602,
+										603
+									]
+								],
+								"scope": "l1._rb"
+							},
+							"_rb_l2":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										132,
+										133
+									],
+									[
+										144,
+										145
+									],
+									[
+										477,
+										478
+									],
+									[
+										491,
+										492
+									],
+									[
+										523,
+										524
+									],
+									[
+										556,
+										557
+									],
+									[
+										582,
+										583
+									],
+									[
+										596,
+										597
+									]
+								],
+								"scope": "l2._rb"
+							},
+							"_rb_l3":
+							{
+								"flags": 272,
+								"regions":
+								[
+									[
+										554,
+										555
+									],
+									[
+										555,
+										556
+									]
+								],
+								"scope": "l3._rb"
+							}
+						},
+						"selection":
+						[
+							[
+								605,
+								605
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								},
+								{
+									"characters": ".>#\"/:",
+									"selector": "meta.tag, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc",
+									"server": "odin"
+								}
+							],
+							"lsp_active": true,
+							"lsp_uri": "file:///C:/Users/Alexander/Coding/Odin/midgard3d_editor_odin_raylib/src/main.odin",
+							"show_definitions": false,
+							"syntax": "Packages/Odin/Odin.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 132.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"output.exec":
+	{
+		"height": 327.0,
+		"history":
+		[
+		]
+	},
+	"output.find_results":
+	{
+		"height": 178.0,
+		"history":
+		[
+		]
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"pinned_build_system": "sublime_odin_template",
+	"project": "sublime_odin.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"wrap",
+				"vendor\\glfw\\wrapper.odin"
+			],
+			[
+				"",
+				"HelloOdin\\.gitignore"
+			],
+			[
+				"raylib",
+				"raylib\\raylib.odin"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 303.666666667,
+		"last_filter": "small",
+		"selected_items":
+		[
+			[
+				"small",
+				"Small_Array"
+			],
+			[
+				"small_",
+				"Small_Array"
+			],
+			[
+				"rawdata",
+				"raw_data"
+			],
+			[
+				"pars_int",
+				"parse_int"
+			],
+			[
+				"is number",
+				"isnumber"
+			],
+			[
+				"is_numeric",
+				"is_numeric"
+			],
+			[
+				"is_number",
+				"is_number"
+			],
+			[
+				"clamp",
+				"clamp"
+			],
+			[
+				"factorial",
+				"int_factorial"
+			],
+			[
+				"match",
+				"match"
+			],
+			[
+				"small_arra",
+				"Small_Array"
+			],
+			[
+				"rand",
+				"random"
+			],
+			[
+				"getfram",
+				"GetFrameTime"
+			],
+			[
+				"fmt",
+				"fmt_arg"
+			],
+			[
+				"type",
+				"Type_Info"
+			],
+			[
+				"Maybe",
+				"Maybe"
+			],
+			[
+				"camera",
+				"Camera"
+			],
+			[
+				"TICK_R",
+				"TICK_RATE"
+			],
+			[
+				"vec2i",
+				"Vec2i"
+			]
+		],
+		"width": 580.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"lsp_show_inlay_hints": false
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 214.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

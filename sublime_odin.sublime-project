@@ -1,0 +1,44 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+		},
+		{
+			"path": "C:\\Odin\\base",
+		},
+		{
+			"path": "C:\\Odin\\core",
+		},
+		{
+			"path": "C:\\Odin\\vendor",
+		},
+		{
+			"path": "C:\\Odin\\examples"
+		},
+		{
+			"path": "C:\\Odin\\shared"
+		},
+	],
+	"build_systems": 
+	[
+		{
+			"name": "sublime_odin_template",
+			"shell_cmd": "cd \"${file_path}/..\" && odin run \"$file\" -file -show-timings -debug",
+		// "shell_cmd": "cd \"${file_path}/..\" && odin run \"$file\"  -file -show-timings -vet -strict-style -debug -o:speed",
+		//"cmd": "odin run $file -file -show-timings -debug",
+		// "cmd": "odin run $file -file -show-timings -vet -strict-style -debug -o:speed",
+			"file_regex": "^(.+)\\(([0-9]+):([0-9]+)\\) (.+)$"
+		},
+	],
+	"settings":
+	{
+		"LSP":
+		{
+			"odin":
+			{
+				"enabled": true,
+			},
+		},
+	},
+}
