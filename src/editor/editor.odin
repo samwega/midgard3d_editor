@@ -20,7 +20,9 @@ init :: proc() -> State {
     // Enable MSAA for smooth grid lines before creating window
     rl.SetConfigFlags(rl.ConfigFlags{.MSAA_4X_HINT})
     rl.InitWindow(3100, 1360, "Midgard - An Odin 3D Editor")
-    rl.SetTargetFPS(60)
+
+    // Initialize FPS settings after window creation
+    ui.apply_fps_settings()
     
     // Disable ESC key to close window - we handle ESC for deselection instead
     rl.SetExitKey(rl.KeyboardKey(0)) // Use key code 0 for no key

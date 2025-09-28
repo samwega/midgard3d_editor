@@ -14,8 +14,8 @@ draw_adaptive_grid :: proc(camera_distance: f32, camera_pos: rl.Vector3) {
 // Unified grid system - single 1m grid with emphasized major lines
 draw_unified_grid :: proc(camera_pos: rl.Vector3, camera_height: f32) {
     max_radius := f32(150)
-    base_grid_color := rl.Color{140, 140, 130, 235}
-    major_grid_color := rl.Color{105, 100, 107, 235}  // Darker shade for 8m lines
+    base_grid_color := rl.Color{140, 140, 130, 235}     // 1x1m grid color
+    major_grid_color := rl.Color{105, 100, 107, 235}    // 8x8m grid color
     
     camera_x := camera_pos.x
     camera_z := camera_pos.z

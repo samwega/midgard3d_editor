@@ -7,17 +7,34 @@ import "core:path/filepath"
 import "core:fmt"
 import rl "vendor:raylib"
 
+// FPS Performance modes
+FPS_Mode :: enum {
+    VSYNC_60,      // VSYNC enabled, 60 FPS target
+    PERFORMANCE_120, // VSYNC disabled, 120 FPS target
+    UNLIMITED,     // No FPS limit
+}
+
+FPS_Settings :: struct {
+    current_mode: FPS_Mode,
+}
+
 // Menu bar state
 Menu_Bar_State :: struct {
     height: f32,
     file_menu_open: bool,
     view_menu_open: bool,
+    settings_menu_open: bool,
+    fps_settings: FPS_Settings,
 }
 
 menu_bar_state := Menu_Bar_State{
     height = 30,
     file_menu_open = false,
     view_menu_open = false,
+    settings_menu_open = false,
+    fps_settings = FPS_Settings{
+        current_mode = .VSYNC_60,
+    },
 }
 
 // Draw menu bar and handle immediate interactions
@@ -64,7 +81,18 @@ draw_menu_bar :: proc(ui_state: ^UI_State) {
     
     text_pos = rl.Vector2{view_button_rect.x + 10, view_button_rect.y + 4}
     draw_text(.REGULAR, "View", text_pos, UI_COLORS.TEXT)
-    
+
+    // --- Settings Menu ---
+    settings_button_rect := rl.Rectangle{base_x + 130, 2, 95, menu_bar_state.height - 4}
+    settings_hovered := rl.CheckCollisionPointRec(mouse_pos, settings_button_rect)
+
+    if settings_hovered {
+        rl.DrawRectangleRec(settings_button_rect, UI_COLORS.HOVER)
+    }
+
+    text_pos = rl.Vector2{settings_button_rect.x + 10, settings_button_rect.y + 4}
+    draw_text(.REGULAR, "Settings", text_pos, UI_COLORS.TEXT)
+
     // --- Draw Centered Filename ---
     filename := serialization.get_current_filename()
     if serialization.has_unsaved_changes() {
@@ -81,27 +109,41 @@ draw_menu_bar :: proc(ui_state: ^UI_State) {
     if file_hovered && rl.IsMouseButtonPressed(.LEFT) {
         menu_bar_state.file_menu_open = !menu_bar_state.file_menu_open
         menu_bar_state.view_menu_open = false  // Close other menus
+        menu_bar_state.settings_menu_open = false
     }
     
     if view_hovered && rl.IsMouseButtonPressed(.LEFT) {
         menu_bar_state.view_menu_open = !menu_bar_state.view_menu_open
         menu_bar_state.file_menu_open = false  // Close other menus
+        menu_bar_state.settings_menu_open = false
     }
-    
+
+    if settings_hovered && rl.IsMouseButtonPressed(.LEFT) {
+        menu_bar_state.settings_menu_open = !menu_bar_state.settings_menu_open
+        menu_bar_state.file_menu_open = false  // Close other menus
+        menu_bar_state.view_menu_open = false
+    }
+
+    settings_hovered = rl.CheckCollisionPointRec(mouse_pos, rl.Rectangle{base_x + 130, 2, 95, menu_bar_state.height - 4})
+
     // Close menus when clicking elsewhere (but not inside dropdown menu areas)
     if rl.IsMouseButtonPressed(.LEFT) {
         // Check if click is within any menu or dropdown area
         file_dropdown_rect := rl.Rectangle{base_x, menu_bar_state.height, 300, 200} // File menu dropdown area
         view_dropdown_rect := rl.Rectangle{base_x + 65, menu_bar_state.height, 220, 75} // View menu dropdown area
-        
+        settings_dropdown_rect := rl.Rectangle{base_x + 130, menu_bar_state.height, 250, 125}
+
         click_in_ui := rl.CheckCollisionPointRec(mouse_pos, file_button_rect) ||
                        rl.CheckCollisionPointRec(mouse_pos, view_button_rect) ||
+                       rl.CheckCollisionPointRec(mouse_pos, settings_button_rect) ||
                        (menu_bar_state.file_menu_open && rl.CheckCollisionPointRec(mouse_pos, file_dropdown_rect)) ||
-                       (menu_bar_state.view_menu_open && rl.CheckCollisionPointRec(mouse_pos, view_dropdown_rect))
-        
+                       (menu_bar_state.view_menu_open && rl.CheckCollisionPointRec(mouse_pos, view_dropdown_rect)) ||
+                       (menu_bar_state.settings_menu_open && rl.CheckCollisionPointRec(mouse_pos, settings_dropdown_rect))
+
         if !click_in_ui {
             menu_bar_state.file_menu_open = false
             menu_bar_state.view_menu_open = false
+            menu_bar_state.settings_menu_open = false
         }
     }
 }
@@ -129,6 +171,13 @@ draw_menu_dropdowns :: proc(ui_state: ^UI_State) {
         view_menu_pos := rl.Vector2{base_x + 65, menu_bar_state.height}
         draw_view_menu(view_menu_pos, ui_state)
         // This menu handles its own state changes, so we don't check for a return value
+    }
+
+    // --- Settings Menu Dropdown ---
+    if menu_bar_state.settings_menu_open {
+        settings_menu_pos := rl.Vector2{base_x + 130, menu_bar_state.height}
+        draw_settings_menu(settings_menu_pos)
+        // Settings menu handles its own state changes
     }
 }
 
@@ -259,6 +308,93 @@ draw_view_menu :: proc(position: rl.Vector2, ui_state: ^UI_State) {
     }
 }
 
+// Draw settings menu dropdown
+draw_settings_menu :: proc(position: rl.Vector2) {
+    menu_width := f32(250)  // width of the dropdown menu
+    item_height := f32(25)
+
+    // FPS performance options with radio button style selection
+    fps_modes := []struct {
+        mode: FPS_Mode,
+        text: string,
+        is_selected: bool,
+    } {
+        {.VSYNC_60, "VSYNC (60 FPS)", menu_bar_state.fps_settings.current_mode == .VSYNC_60},
+        {.PERFORMANCE_120, "Performance (120 FPS)", menu_bar_state.fps_settings.current_mode == .PERFORMANCE_120},
+        {.UNLIMITED, "Unlimited FPS", menu_bar_state.fps_settings.current_mode == .UNLIMITED},
+    }
+
+    menu_height := f32(len(fps_modes) + 1) * item_height  // +1 for header
+
+    // Draw menu background with transparency
+    menu_bg := UI_COLORS.BACKGROUND
+    menu_bg.a = 220
+    menu_rect := rl.Rectangle{position.x, position.y, menu_width, menu_height}
+    rl.DrawRectangleRec(menu_rect, menu_bg)
+
+    menu_border := UI_COLORS.BORDER
+    menu_border.a = 220
+    rl.DrawRectangleLinesEx(menu_rect, 1, menu_border)
+
+    mouse_pos := rl.GetMousePosition()
+
+    // Draw section header
+    header_rect := rl.Rectangle{position.x, position.y, menu_width, item_height}
+    draw_text(.SMALL, "Performance", {position.x + 10, position.y + 6}, UI_COLORS.TEXT_MUTED)
+
+    for i := 0; i < len(fps_modes); i += 1 {
+        item_rect := rl.Rectangle{position.x, position.y + f32(i + 1) * item_height, menu_width, item_height}
+
+        is_hovered := rl.CheckCollisionPointRec(mouse_pos, item_rect)
+        if is_hovered {
+            rl.DrawRectangleRec(item_rect, UI_COLORS.HOVER)
+        }
+
+        // Draw radio button - simple approach: outer circle always, inner only for selected
+        radio_rect := rl.Rectangle{item_rect.x + 10, item_rect.y + 5, 15, 15}
+        center_x := i32(radio_rect.x + radio_rect.width/2)
+        center_y := i32(radio_rect.y + radio_rect.height/2)
+
+        // Always draw outer circle
+        rl.DrawCircle(center_x, center_y, radio_rect.width/2, UI_COLORS.ACCENT)
+
+        // Only draw inner filled circle for selected option - use different color to test
+        if i == 0 && menu_bar_state.fps_settings.current_mode == .VSYNC_60 {
+            rl.DrawCircle(center_x, center_y, 5, UI_COLORS.HOVER)
+        } else if i == 1 && menu_bar_state.fps_settings.current_mode == .PERFORMANCE_120 {
+            rl.DrawCircle(center_x, center_y, 5, UI_COLORS.HOVER)
+        } else if i == 2 && menu_bar_state.fps_settings.current_mode == .UNLIMITED {
+            rl.DrawCircle(center_x, center_y, 5, UI_COLORS.HOVER)
+        }
+
+        // Draw text
+        draw_text(.REGULAR, strings.clone_to_cstring(fps_modes[i].text, context.temp_allocator),
+                 {item_rect.x + 35, item_rect.y + 6}, UI_COLORS.TEXT)
+
+        // Handle click
+        if is_hovered && rl.IsMouseButtonPressed(.LEFT) {
+            menu_bar_state.fps_settings.current_mode = FPS_Mode(i)
+            apply_fps_settings()
+            // Close menu after selection
+            menu_bar_state.settings_menu_open = false
+        }
+    }
+}
+
+// Apply FPS settings based on current mode
+apply_fps_settings :: proc() {
+    switch menu_bar_state.fps_settings.current_mode {
+    case .VSYNC_60:
+        rl.SetConfigFlags({.VSYNC_HINT})
+        rl.SetTargetFPS(60)
+    case .PERFORMANCE_120:
+        rl.SetConfigFlags({})  // Clear VSYNC
+        rl.SetTargetFPS(120)
+    case .UNLIMITED:
+        rl.SetConfigFlags({})  // Clear VSYNC
+        rl.SetTargetFPS(0)     // Unlimited
+    }
+}
 
 // Get menu bar height for layout adjustment
 get_menu_bar_height :: proc() -> f32 {
@@ -283,13 +419,21 @@ is_mouse_over_dropdown_menus :: proc() -> bool {
         }
     }
     
-    // Check view menu dropdown area  
+    // Check view menu dropdown area
     if menu_bar_state.view_menu_open {
         view_dropdown_rect := rl.Rectangle{base_x + 65, menu_bar_state.height, 220, 75}
         if rl.CheckCollisionPointRec(mouse_pos, view_dropdown_rect) {
             return true
         }
     }
-    
+
+    // Check settings menu dropdown area
+    if menu_bar_state.settings_menu_open {
+        settings_dropdown_rect := rl.Rectangle{base_x + 130, menu_bar_state.height, 250, 125}
+        if rl.CheckCollisionPointRec(mouse_pos, settings_dropdown_rect) {
+            return true
+        }
+    }
+
     return false
 }

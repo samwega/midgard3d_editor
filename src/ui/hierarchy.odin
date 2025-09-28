@@ -220,10 +220,15 @@ draw_hierarchy :: proc(ui_state: ^UI_State,
     draw_text(.SMALL, strings.clone_to_cstring(speed_text, context.temp_allocator), {padding, debug_y_pos}, UI_COLORS.TEXT_MUTED)
     debug_y_pos += 20
     
-    // Zoom info
+    // Zoom and FPS info on same line
     zoom_text := fmt.tprintf("Zoom:  %.1f m", distance)
     defer delete(zoom_text, context.temp_allocator)
     draw_text(.SMALL, strings.clone_to_cstring(zoom_text, context.temp_allocator), {padding, debug_y_pos}, UI_COLORS.TEXT_MUTED)
+
+    fps_text := fmt.tprintf("FPS:   %d", rl.GetFPS())
+    defer delete(fps_text, context.temp_allocator)
+    fps_width := measure_text(.SMALL, strings.clone_to_cstring(fps_text, context.temp_allocator)).x
+    draw_text(.SMALL, strings.clone_to_cstring(fps_text, context.temp_allocator), {hierarchy_state.panel_width - fps_width - padding, debug_y_pos}, UI_COLORS.TEXT_MUTED)
 }
 
 // Get hierarchy visibility
