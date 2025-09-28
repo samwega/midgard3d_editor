@@ -3,13 +3,14 @@ package ui
 import "../serialization"
 import "../scene"
 import "core:strings"
-import "core:path/filepath"
-import "core:fmt"
+// import "core:path/filepath"
+// import "core:fmt"
 import rl "vendor:raylib"
 
 // FPS Performance modes
 FPS_Mode :: enum {
     VSYNC_60,      // VSYNC enabled, 60 FPS target
+    PERFORMANCE_90, // VSYNC disabled, 120 FPS target
     PERFORMANCE_120, // VSYNC disabled, 120 FPS target
     UNLIMITED,     // No FPS limit
 }
@@ -320,6 +321,7 @@ draw_settings_menu :: proc(position: rl.Vector2) {
         is_selected: bool,
     } {
         {.VSYNC_60, "VSYNC (60 FPS)", menu_bar_state.fps_settings.current_mode == .VSYNC_60},
+        {.PERFORMANCE_90, "Performance (90 FPS)", menu_bar_state.fps_settings.current_mode == .PERFORMANCE_90},
         {.PERFORMANCE_120, "Performance (120 FPS)", menu_bar_state.fps_settings.current_mode == .PERFORMANCE_120},
         {.UNLIMITED, "Unlimited FPS", menu_bar_state.fps_settings.current_mode == .UNLIMITED},
     }
@@ -356,15 +358,17 @@ draw_settings_menu :: proc(position: rl.Vector2) {
         center_y := i32(radio_rect.y + radio_rect.height/2)
 
         // Always draw outer circle
-        rl.DrawCircle(center_x, center_y, radio_rect.width/2, UI_COLORS.ACCENT)
+        rl.DrawCircle(center_x, center_y, radio_rect.width/2, UI_COLORS.INPUT_BG)
 
         // Only draw inner filled circle for selected option - use different color to test
         if i == 0 && menu_bar_state.fps_settings.current_mode == .VSYNC_60 {
-            rl.DrawCircle(center_x, center_y, 5, UI_COLORS.HOVER)
-        } else if i == 1 && menu_bar_state.fps_settings.current_mode == .PERFORMANCE_120 {
-            rl.DrawCircle(center_x, center_y, 5, UI_COLORS.HOVER)
-        } else if i == 2 && menu_bar_state.fps_settings.current_mode == .UNLIMITED {
-            rl.DrawCircle(center_x, center_y, 5, UI_COLORS.HOVER)
+            rl.DrawCircle(center_x, center_y, 4, UI_COLORS.ACCENT)
+        } else if i == 1 && menu_bar_state.fps_settings.current_mode == .PERFORMANCE_90 {
+            rl.DrawCircle(center_x, center_y, 4, UI_COLORS.ACCENT)
+        } else if i == 2 && menu_bar_state.fps_settings.current_mode == .PERFORMANCE_120 {
+            rl.DrawCircle(center_x, center_y, 4, UI_COLORS.ACCENT)
+        } else if i == 3 && menu_bar_state.fps_settings.current_mode == .UNLIMITED {
+            rl.DrawCircle(center_x, center_y, 4, UI_COLORS.ACCENT)
         }
 
         // Draw text
@@ -387,6 +391,9 @@ apply_fps_settings :: proc() {
     case .VSYNC_60:
         rl.SetConfigFlags({.VSYNC_HINT})
         rl.SetTargetFPS(60)
+    case .PERFORMANCE_90:
+        rl.SetConfigFlags({})  // Clear VSYNC
+        rl.SetTargetFPS(90)
     case .PERFORMANCE_120:
         rl.SetConfigFlags({})  // Clear VSYNC
         rl.SetTargetFPS(120)

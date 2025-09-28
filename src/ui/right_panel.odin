@@ -2,11 +2,11 @@ package ui
 
 import "../scene"
 import "../selection"
-import "../core"
+// import "../core"
 import "../resources"
 import "../camera"
-import "core:fmt"
-import "core:strings"
+// import "core:fmt"
+// import "core:strings"
 import rl "vendor:raylib"
 
 // Draw the entire right panel, including environment and inspector sections
