@@ -1,5 +1,7 @@
 I .gitignored assets to save on repo size. This means the demo will not load correctly. You can get two meshes and two HDRI files (for skyboxes) [here.](https://drive.google.com/drive/folders/1dX8dS8vkZ3qm_gY3xDT0OgJHHKJ8JspG?usp=sharing) Just place the two .glb files in assets/models and the .hdri files in the assets/skyboxes and you're good to go.
 
+Demo on YouTube: https://www.youtube.com/watch?v=F87GOLFAjeo&list=PLmm7XJgMX1nG5sUoMprfB7NG4i4ZYhwmy&index=1
+
 # Quick Start Guide
 
 ## Running the program:
@@ -19,4 +21,7 @@ So I'd just use `odin run src/main.odin -file -resource:midgard.rc -show-timings
 ## Once it launches:
 - Press `m` key to view comprehensive hotkeys map
 - Press ctrl+o to open (import) a demo scene I made for a quick start, navigate to: "midgard3d_editor_odin_raylib\assets\scenes\demo_scene.json"
-- Most options should be discoverable in File dropdown menu
+- Most options should be discoverable in File dropdown menu / hotkey map / inspector
+
+# Notes
+Currently works with the Raylib included in Odin vendor which is compiled for OpenGL 2.0, however it should be easy to compile Raylib with OpenGL 3.3 flags to get much better 3D support - in particular, the legacy version only supports 16 bit meshes, trying to upload complex meshes now will not work properly. I'm thinking of doing that and including the other Raylib version in this repo.
