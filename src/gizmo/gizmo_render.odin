@@ -2,7 +2,7 @@ package gizmo
 
 import "../scene"
 import rl "vendor:raylib"
-import rlgl "vendor:raylib/rlgl"
+
 import "core:math"
 
 // Colors for gizmo handles - much brighter and more saturated
@@ -135,40 +135,12 @@ update_traditional_screen_state :: proc(state: ^Gizmo_State, position: rl.Vector
 
 
 // Draw the complete gizmo based on current mode
-draw :: proc {
-    // draw_with_position,
-    draw_with_object,
-}
 
-// Draw gizmo with just position (for backward compatibility)
-// draw_with_position :: proc(state: ^Gizmo_State, position: rl.Vector3, camera: rl.Camera3D) {
-//     if state.mode == .NONE {
-//         return
-//     }
-    
-//     // Update screen-space state (world axes)
-//     update_screen_state(state, position, camera)
-    
-//     if !state.visible {
-//         return
-//     }
 
-//     switch state.mode {
-//     case .TRANSLATE:
-//         draw_translation_gizmo(state, camera, position)
-//     case .ROTATE:
-//         draw_rotation_gizmo(state, position, camera)
-//     case .SCALE:
-//         draw_scale_gizmo(state, camera, position)
-//     case .TRANSFORM:
-//         draw_universal_gizmo(state, camera, position)
-//     case .NONE:
-//         // Already handled above
-//     }
-// }
+
 
 // Draw gizmo with full object transform (preferred for LOCAL_ROTATION)
-draw_with_object :: proc(state: ^Gizmo_State, object: ^scene.Scene_Object, camera: rl.Camera3D) {
+draw :: proc(state: ^Gizmo_State, object: ^scene.Scene_Object, camera: rl.Camera3D) {
     if state.mode == .NONE {
         return
     }
